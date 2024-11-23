@@ -9,7 +9,7 @@ y = l/M
 C =  0.03
 P1=130
 P2=9
-xmin, xmax, ymax = 24, 34, 6
+xmin, xmax, ymax = 10, 18, 6
 xmin2, xmax2, ymin2 = 24,34 , 20
 
 def be(i,j,N):
@@ -337,6 +337,8 @@ TY = np.zeros((M, N))
 for i in range(M):
     for j in range(N):
         TY[i][j] = uy[N*i+j][0]
+        
+plt.figure(figsize=(12,6))
 plt.pcolormesh(X, Y, T)
 
 plt.colorbar()
@@ -352,32 +354,3 @@ TY = np.zeros((M, N))
 for i in range(M):
     for j in range(N):
         TY[i][j] = uy[N*i+j][0]
-'''plt.pcolormesh(X, Y, TX)
-plt.colorbar()
-plt.title('Allure de Ux')
-#plt.show()
-plt.pcolormesh(X, Y, TY)
-plt.colorbar()
-plt.title('Allure de Uy')
-#plt.show()
-mat = a
-def detect(mat):
-    lou = len(mat)
-    colones = []
-    for j in range(lou):
-        colones.append([mat[i][j] for i in range(lou)])
-    return colones
-n, s = [], []
-for c in detect(mat):
-    for k in c:
-        if k != 0:
-            n.append(detect(mat).index(c))
-for k in n:
-    if k not in s:
-        s.append(k)
-
-
-print(s)
-print(detect(a)[93])
-print(detect(a)[91])
-print(a[14])'''
