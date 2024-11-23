@@ -9,7 +9,7 @@ y = l/M
 C =  0.03
 P1=130
 P2=9
-xmin, xmax, ymax = 10, 18, 6
+xmin, xmax, ymax = 8, 18, 6
 xmin2, xmax2, ymin2 = 24,34 , 20
 
 def be(i,j,N):
