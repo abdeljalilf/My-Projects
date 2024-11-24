@@ -6,11 +6,14 @@ np.set_printoptions(threshold=sys.maxsize)
 N,M, L,l = 50, 26, 0.3, 0.1
 x = L/N
 y = l/M
-C =  0.03
-P1=130
-P2=9
-xmin, xmax, ymax = 8, 18, 6
-xmin2, xmax2, ymin2 = 24,34 , 20
+# C =  0.03
+# P1=130
+# P2=9
+C =  1.81*1e-5
+P1=15*1e-2
+P2=0
+xmin, xmax, ymax = 6, 12, 6
+xmin2, xmax2, ymin2 = 30,36 , 20
 
 def be(i,j,N):
     return (j)*N + i
@@ -324,7 +327,7 @@ X, Y = np.meshgrid(ab, ord)
 TU = np.zeros((M, N))
 for i in range(M):
     for j in range(N):
-        TU[i][j] = [N*i+j][0]
+        TU[i][j] = u[N*i+j][0]
 T = np.zeros((M, N))
 for i in range(M):
     for j in range(N):
@@ -339,7 +342,10 @@ for i in range(M):
         TY[i][j] = uy[N*i+j][0]
         
 plt.figure(figsize=(12,6))
-plt.pcolormesh(X, Y, T)
+
+# TU pour vitesse
+# T pour pression
+plt.pcolormesh(X, Y, TU)
 
 plt.colorbar()
 plt.quiver(X,Y,TX,TY)
