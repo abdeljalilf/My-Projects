@@ -6,12 +6,10 @@ np.set_printoptions(threshold=sys.maxsize)
 N,M, L,l = 50, 26, 0.3, 0.1
 x = L/N
 y = l/M
-# C =  0.03
-# P1=130
-# P2=9
-C =  1.81*1e-5
-P1=15*1e-2
-P2=0
+C =  0.03
+P1=130
+P2=9
+
 xmin, xmax, ymax = 6, 12, 6
 xmin2, xmax2, ymin2 = 30,36 , 20
 
