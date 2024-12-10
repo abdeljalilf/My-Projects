@@ -349,12 +349,3 @@ plt.colorbar()
 plt.quiver(X,Y,TX,TY)
 plt.title('Allure de la vitesse')
 plt.show()
-
-TX = np.zeros((M, N))
-for i in range(M):
-    for j in range(N):
-        TX[i][j] = ux[N*i+j][0]
-TY = np.zeros((M, N))
-for i in range(M):
-    for j in range(N):
-        TY[i][j] = uy[N*i+j][0]
