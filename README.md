@@ -1,1 +1,1 @@
-# **Some projects that I worked on**
+# **Some Projects I Worked on During My Engineering Studies**
